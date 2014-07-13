@@ -174,3 +174,4 @@ gem 'jquery-validation-rails'
 
 gem "paranoia", "~> 2.0"
 gem "fog"
+gem "figaro"

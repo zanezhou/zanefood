@@ -34,7 +34,21 @@
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
+              <ul class="nav navbar-nav navbar-right">
+  		  <% if user_signed_in? %>
+              <li>
+  			  <%= link_to current_user.email, "#" %>
+  			</li>
+              <li>
+  			  <%= link_to "退出", destroy_user_session_path, :method => :delete %>
+  			</li>
+  		  <% else %>
+              <li>
+  			  <%= link_to "登录", new_user_session_path %>
+  			</li>
+  		  <% end %>
+          </ul>
+	</div>
     </div>
   </div>
   <div class="container">
