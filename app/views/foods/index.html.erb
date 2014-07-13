@@ -25,7 +25,7 @@
             <td><%= food.name %></td>
             <td><%= food.price %></td>
             <td><%= food.memo %></td>
-            <td><%= food.image %></td>
+            <td><%= image_tag food.image.thumb.url %></td>
             <td><%= link_to 'Show', food %></td>
         <td><%= link_to 'Edit', edit_food_path(food) %></td>
         <td><%= link_to 'Destroy', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
